@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+var z = 43  // use var to declare outside of function body
+var k int // declare there is a variable with identifier k of type int
+// nil for pointers, false for booleans, 0.0 for floats and 0 for ints.
 func main() {
 	foo()
 
@@ -23,8 +26,12 @@ func main() {
 
 	fmt.Println("x= ", x , "y = ", y)
 
+
+
+	fmt.Println(z)
 }
 
 func foo() {
 	fmt.Println("Hello from func FOO")
+	fmt.Println("In foo z is equal to", z, "value of K = ", k)
 }
