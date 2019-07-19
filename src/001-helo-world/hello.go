@@ -5,7 +5,15 @@ import "fmt"
 func main() {
 	foo()
 
-	fmt.Println("Hello Santhose")
+	n, err := fmt.Println("Hello Santhose", 42, true)
+	fmt.Println(n, err)
+
+	m, _ := fmt.Println("No error capture")
+
+	fmt.Println(m)
+
+	n, _ = fmt.Println("Notice ':' is used when declaring a new variable only")
+
 }
 
 func foo() {
